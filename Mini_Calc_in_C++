@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std; 
+
+int main ()
+{
+    auto first_number=0.0, second_number=0.0; 
+    int function;
+    cout<< "Enter two numbers you want to play with: "<<endl; 
+    cin >> first_number >> second_number;
+    cout<< "Enter the function you want to do with the numbers: \nYou have following options: - \n 1.Multiplication(*) \n 2.Division(/) \n 3.Subtraction(-) \n 4.Addition(+) \n 5.Remainder(%) \n"<<endl; 
+    cin >> function; 
+
+    if (function == 1)
+    {
+        int a= first_number*second_number; 
+
+        cout << "Multiplication is: " << a << endl;
+        
+    }
+    else if (function == 2)
+    {
+        int a = first_number/second_number;
+
+        cout << "Division is: " << a << endl;
+         
+    }
+    else if (function == 3)
+    {
+        int a = first_number-second_number;
+
+        cout << "Subtraction is: " << a << endl;
+        
+    }
+    else if (function == 4)
+    {
+        int a = first_number+second_number;
+
+        cout << "Addition is: " << a << endl;
+        
+    }
+    else if (function == 5)
+    {
+        int a = first_number/second_number;
+        if(a*second_number == first_number)
+        {
+            cout << "Remainder is: 0"<< endl;
+            
+        }
+        else if (a==0 && first_number>second_number)
+        {
+            cout << "Remainder is: " << (second_number) << endl;
+        }
+        else 
+        {
+            cout << "Remainder is: " << (first_number-(a*second_number)) << endl;
+        }
+    }
+    return (0);
+}
